@@ -1,5 +1,5 @@
 import AnswerCard from './AnswerCard';
-import { useEffect, useState, _jsx_createElement } from './homemadereact';
+import { useEffect, useState, _jsx_createElement } from '../homemadereact';
 import RandomNumberCard from './RandomNumberCard';
 import StartButton from "./StartButton";
 

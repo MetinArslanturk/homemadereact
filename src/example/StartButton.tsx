@@ -1,4 +1,4 @@
-import { useEffect, _jsx_createElement } from './homemadereact';
+import { useEffect, _jsx_createElement } from '../homemadereact';
 
 const StartButton = ({
   setPlayCount,

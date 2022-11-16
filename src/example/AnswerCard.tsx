@@ -1,4 +1,4 @@
-import { useState, _jsx_createElement } from "./homemadereact";
+import { useState, _jsx_createElement } from "../homemadereact";
 
 const AnswerCard = ({firstNumber, secondNumber}: {firstNumber: number, secondNumber: number}) => {
     const [answerInput, setAnswerInput] = useState('')
