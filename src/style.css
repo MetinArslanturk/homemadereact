@@ -1,0 +1,166 @@
+body {
+  background: #aa4b6b;
+  background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+  background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
+
+}
+
+.game-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.number-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 0.2rem;
+  margin-top: 1rem;
+  transition: 0.3s;
+  width: 16rem;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+  margin-left: 1rem;
+}
+
+.plus-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 0.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  transition: 0.3s;
+  width: 3rem;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  margin-left: 1rem;
+}
+
+.played-text {
+  color: white;
+}
+
+.anawer-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: wheat;
+  border-radius: 0.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  transition: 0.3s;
+  width: 16rem;
+  font-size: 1.5rem;
+  padding: 0.7rem 1rem;
+  text-align: center;
+  margin-left: 1rem;
+}
+
+.center-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.answer-button {
+  background: white;
+  border-radius: 0.2rem;
+  padding: 0.3rem;
+  margin-left: 0.2rem;
+  border: 1px solid #aaa8a8;
+}
+
+.answer-button:active {
+  background-color: #d2d2d6;
+}
+
+.restart-button {
+  background: white;
+  border-radius: 0.2rem;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin-left: 0.2rem;
+  border: 1px solid #aaa8a8;
+}
+
+.restart-button:active {
+  background-color: #d2d2d6;
+}
+
+
+.tdbtn {
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  margin-top: 2rem;
+  background: none;
+  border: none;
+}
+
+.tdbtn .btn {
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  border: none;
+  background: none;
+  height: 0;
+  width: 0;
+}
+
+.tdbtn .btn:before,
+.tdbtn .btn:after {
+  position: absolute;
+  content: "Start Game";
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.tdbtn .btn:before {
+  color: #fff;
+  background: #000;
+  transform: rotateY(0deg) translateZ(25px);
+}
+
+.tdbtn .btn:after {
+  color: #000;
+  transform: rotateX(90deg) translateZ(25px);
+}
+
+.tdbtn .btn:hover {
+  transform: translateZ(-15px) rotateX(-90deg);
+}
+
+.wrong-answer {
+  color:#aa4b6b
+}
+
+.correct-answer {
+  color: #295c29;
+}
+
+@media only screen and (max-width: 750px) {
+  .card-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
