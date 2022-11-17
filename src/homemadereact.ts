@@ -40,7 +40,7 @@ let _currentNode: ReactNode | null = null;
 let _stateHookIndex = 0;
 let _effectHookIndex = 0;
 
-const EFFECT_RUN_TIMEOUT = 100;
+const EFFECT_RUN_TIMEOUT = 20;
 
 function isTextElement(element: ReactElement): element is ReactTextElement {
   return typeof element === 'string';
