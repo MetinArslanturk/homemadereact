@@ -198,7 +198,7 @@ function diffAndMountNode(
 
   if (!oldReactNode && newReactNode) {
     // New creation of node
-    if (isHTMLElement(newReactNode.element)) {
+    if (isHTMLElement(newReactNode.element) || isTextElement(newReactNode.element)) {
       const parentDomNode = findNearestParentDomNode(newReactNode);
       parentDomNode.appendChild(newReactNode.domNode!);
     }
@@ -292,6 +292,10 @@ function diffAndMountNode(
     oldReactNode.element = newReactNode.element;
     oldReactNode.childNodes = newReactNode.childNodes;
     oldReactNode.domNode = newReactNode.domNode;
+    if (isHTMLElement(oldReactNode.element)  || isTextElement(oldReactNode.element)) {
+      const parentDomNode = findNearestParentDomNode(oldReactNode);
+      parentDomNode.appendChild(oldReactNode.domNode!);
+    }
     mountChildDomNodes(oldReactNode);
   }
 }
@@ -460,10 +464,10 @@ function mountChildDomNodes(reactNode: ReactNode) {
 
 function unMountDomNode(reactNode: ReactNode) {
     if (isComponentElement(reactNode.element)) {
-        reactNode.element.effectHooks?.map((effectHook) => {
-            effectHook.cleanup?.();
-        });
-      }
+      reactNode.element.effectHooks?.map((effectHook) => {
+        effectHook.cleanup?.();
+      });
+    }
 
   if (isTextElement(reactNode.element)) {
     findNearestParentDomNode(reactNode).removeChild(reactNode.domNode!);
